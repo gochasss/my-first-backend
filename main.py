@@ -1,4 +1,9 @@
-name = input("Enter your name: ")
-age = int(input("Enter your age: "))
+name = input("What is your name? ")
+age = int(input("How old are you? "))
 
-print(f"Hello, {name}. In 5 years you will be {age + 5}.")
+future = age + 10
+
+print("==========")
+print(f"Hello, {name}")
+print(f"In 10 years you will be {future}")
+print("==========")
