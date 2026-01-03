@@ -59,6 +59,13 @@ def migrate():
         except:
             pass
 
+        try:
+            db.execute("ALTER TABLE tasks ADD COLUMN is_main INTEGER DEFAULT 0")
+        except:
+            pass
+
+        db.commit()
+
 init_db()
 migrate()
 
