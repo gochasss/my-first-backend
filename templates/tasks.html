@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мой день</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">📋 Мой день</h1>
+
+    <form method="post" class="task-form">
+        <input name="task" placeholder="Новая задача" required>
+
+        <label class="main-check">
+            <input type="checkbox" name="main">
+            Главная задача дня
+        </label>
+
+        <button>Добавить</button>
+    </form>
+
+    <div class="tasks">
+        {% for task in rows %}
+            {% if task[2] == 1 %}
+                <div class="task main">
+                    🔥 {{ task[1] }}
+                    <a href="/delete/{{ task[0] }}">❌</a>
+                </div>
+            {% else %}
+                <div class="task">
+                    • {{ task[1] }}
+                    <a href="/delete/{{ task[0] }}">❌</a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <a class="logout" href="/logout">Выйти</a>
+</div>
+
+</body>
+</html> 

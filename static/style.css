@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+body {
+    margin: 0;
+    background: #f4f6fb;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    color: #1e293b;
+    outline: none;
+}
+
+input:focus {
+    border-color: #6366f1;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #6366f1;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+button:hover {
+    background: #4f46e5;
+    transform: translateY(-1px);
+}
+
+.task {
+    background: #f8fafc;
+    padding: 12px 14px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+
+
+.task a {
+    color: #ef4444;
+    font-size: 18px;
+    text-decoration: none;
+    
+    font-size: 20px;
+}
+
+
+.task a:hover {
+    opacity: 0.7;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.main-check input {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.logout {
+    position: absolute;
+    right: 20px;
+    bottom: 9px;
+    font-size: 14px;
+    color: #64748b;
+    text-decoration: none;
+}
+
+.logout:hover {
+    color: #1e293b;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 520px) {
+
+    body {
+        padding: 12px;
+        align-items: flex-start;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    h1, h2 {
+        font-size: 22px;
+    }
+
+    input, button {
+        font-size: 16px;
+    }
+
+    .task {
+        font-size: 15px;
+    }
+
+    .logout {
+        bottom: 14px;
+        right: 14px;
+    }
+}

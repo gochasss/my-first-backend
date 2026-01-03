@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ВОТ ЭТО ОБЯЗАТЕЛЬНО -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Вход</h2>
+
+    <form method="post">
+        <input name="username" placeholder="Логин" required>
+        <input name="password" type="password" placeholder="Пароль" required>
+        <button>Войти</button>
+    </form>
+
+    <p>Нет аккаунта? <a href="{{ url_for('register') }}">Регистрация</a>
+</div>
+
+</body>
+</html>

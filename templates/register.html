@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Регистрация</h2>
+
+    <form method="post">
+        <input name="username" placeholder="Логин" required>
+        <input name="password" type="password" placeholder="Пароль" required>
+        <button>Зарегистрироваться</button>
+    </form>
+
+    <p><a href="{{ url_for('index') }}">Назад ко входу</a></p>
+</div>
+
+</body>
+</html>

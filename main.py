@@ -1,4 +1,4 @@
-
+print("main.py")
 
 def load_tasks():
     tasks = []
